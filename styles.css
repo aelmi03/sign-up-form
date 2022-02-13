@@ -55,7 +55,6 @@ body {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
-  gap: 1.5rem;
 }
 
 .informational-section {
@@ -76,7 +75,7 @@ body {
   display: flex;
   flex-flow: column nowrap;
   padding: 2rem;
-  box-shadow: 3px 1px 10px grey;
+  box-shadow: 1px 1px 5px rgb(190, 189, 189);
   gap: 2.5rem;
 }
 
@@ -89,24 +88,26 @@ body {
 .input-field {
   display: flex;
   flex-flow: column nowrap;
-  width: 100%;
 }
 .input-label {
   font-size: 0.7rem;
   font-family: "Montserrat", sans-serif;
   color: rgb(49, 49, 49);
 }
-input[type] {
+input {
   font-size: 0.9rem;
   padding: 0.3rem;
   border-radius: 5px;
   font-family: "Poppins", sans-serif;
   border: 1px solid #e5e7eb;
 }
-
+button,
+span {
+  cursor: pointer;
+}
 .create-button {
   font-size: 1.1rem;
-  padding: 0.7rem 1.7rem;
+  padding: 0.7rem 2.7rem;
   font-weight: 600;
   text-align: center;
   color: white;
@@ -115,7 +116,7 @@ input[type] {
   border: none;
   font-family: "Poppins", sans-serif;
   background-color: #596d48;
-  max-width: 200px;
+  max-width: 270px;
 }
 .bottom-section {
   display: flex;
@@ -131,4 +132,59 @@ input[type] {
 }
 .log-in {
   color: #596d48;
+  font-weight: 600;
+}
+.errorText {
+  font-size: 0.7rem;
+  color: red;
+  font-family: "Poppins", sans-serif;
+  opacity: 0;
+}
+
+.invalid,
+.invalid:focus {
+  outline: none !important;
+  border: 2px solid rgb(255, 58, 8);
+}
+.valid,
+.valid:focus {
+  outline: none !important;
+  border: 2px solid rgb(124, 207, 0);
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    flex-flow: row nowrap;
+  }
+  .content-section {
+    justify-content: center;
+  }
+  .image-section {
+    padding: 20rem 0rem;
+    min-width: 40vw;
+  }
+  .image-container {
+    width: 80px;
+    height: 100px;
+  }
+  .form-content {
+    flex-flow: row wrap;
+  }
+  .logo-container {
+    align-self: flex-start;
+  }
+  .logo-heading {
+    font-size: 5rem;
+  }
+  .bottom-section {
+    align-items: flex-start;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .image-container {
+    width: 100px;
+    height: 120px;
+  }
+  .input-field {
+    width: 45%;
+  }
 }

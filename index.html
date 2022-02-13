@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-
+    <script src="index.js" defer></script>
     <title>Sign Up Form</title>
   </head>
   <body>
@@ -39,26 +39,32 @@
             <div class="input-field">
               <label class = "input-label">FIRST NAME</label class = "input-label">
               <input type="text" required />
+              <p class = "errorText">First name can't be empty</p>
             </div>
             <div class="input-field">
               <label class = "input-label">LAST NAME</label class = "input-label">
               <input type="text" required />
+              <p class = "errorText">Last name can't be empty</p>
             </div>
             <div class="input-field">
               <label class = "input-label">EMAIL</label class = "input-label">
               <input type="email" required />
+              <p class = "errorText">You must enter a valid email address</p>
             </div>
             <div class="input-field">
               <label class = "input-label">PHONE NUMBER</label class = "input-label">
               <input type="tel" required />
+              <p class = "errorText">Phone number can't be empty</p>
             </div>
             <div class="input-field">
               <label class = "input-label">PASSWORD</label class = "input-label">
               <input type="password" required />
+              <p class = "errorText">Password can't be empty</p>
             </div>
             <div class="input-field">
               <label class = "input-label">CONFIRM PASSWORD</label class = "input-label">
               <input type="password" required />
+              <p class = "errorText">First name can't be empty</p>
             </div>
           </div>
         </form>
