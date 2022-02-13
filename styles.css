@@ -5,14 +5,100 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+@font-face {
+  font-family: "Norse Bold";
+  src: url("assets/Norse-Bold.otf");
+  font-weight: bold;
+}
 body {
-  display: flex;
-  flex-flow: column nowrap;
   width: 100%;
   min-height: 100vh;
 }
-.logo-section {
+.container {
+  display: flex;
+  width: 100%;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+}
+.image-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/assets/forest-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem 0rem;
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  padding: 0.5rem;
+  height: min-content;
+}
+.image-container {
+  width: 60px;
+  height: 80px;
+}
+.image-container > img {
+  height: 100%;
+  width: 100%;
+}
+.logo-heading {
+  font-family: "Norse Bold", sans-serif;
+  font-size: 3.8rem;
+  color: White;
 }
 .content-section {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+.informational-section {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.informational-text {
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 2rem;
+  box-shadow: 3px 1px 10px grey;
+  gap: 2.5rem;
+}
+
+.form-content {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.5rem;
+}
+
+.input-field {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+.input-label {
+  font-size: 0.7rem;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(49, 49, 49);
+}
+input[type="text"],
+input[type="password"] {
+  font-size: 0.9rem;
+  padding: 0.3rem;
+  border-radius: 5px;
+  border: 1px solid #e5e7eb;
 }
