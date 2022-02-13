@@ -5,6 +5,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --invalid: rgb(255, 58, 8);
+  --valid: rgb(124, 207, 0);
+  --dark-text: rgb(49, 49, 49);
+  --primary: #596d48;
+  --primary-text: #000000;
+  --secondary-text: #ffffff;
+  --primary-border: #e5e7eb;
+  --neutral-light: rgb(194, 193, 193);
+  --neutral-dark: rgb(145, 145, 145);
+}
 @font-face {
   font-family: "Norse Bold";
   src: url("assets/Norse-Bold.otf");
@@ -28,6 +39,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 1rem 0rem;
+  position: relative;
 }
 .logo-container {
   display: flex;
@@ -49,12 +61,13 @@ body {
 .logo-heading {
   font-family: "Norse Bold", sans-serif;
   font-size: 3.8rem;
-  color: White;
+  color: var(--secondary-text);
 }
 .content-section {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
+  background-color: var(--secondary-text);
 }
 
 .informational-section {
@@ -66,23 +79,23 @@ body {
 
 .informational-text {
   font-size: 1.2rem;
-  font-family: "Poppins", sans-serif;
+  font-family: sans-serif;
   font-weight: 600;
+  color: var(--primary-text);
 }
 
 .form-container {
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
-  padding: 2rem;
-  box-shadow: 1px 1px 5px rgb(190, 189, 189);
+  padding: 0.8rem 2rem;
+  box-shadow: 1px 3px 10px var(--neutral-light);
   gap: 2.5rem;
 }
 
 .form-content {
   display: flex;
   flex-flow: column nowrap;
-  gap: 1.5rem;
 }
 
 .input-field {
@@ -92,30 +105,39 @@ body {
 .input-label {
   font-size: 0.7rem;
   font-family: "Montserrat", sans-serif;
-  color: rgb(49, 49, 49);
+  color: var(--dark-text);
 }
 input {
   font-size: 0.9rem;
   padding: 0.3rem;
   border-radius: 5px;
   font-family: "Poppins", sans-serif;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--primary);
+}
+a {
+  color: var(--secondary-text);
+  text-decoration: underline;
+}
+.credits {
+  display: none;
+  color: var(--secondary-text);
 }
 button,
 span {
   cursor: pointer;
 }
 .create-button {
-  font-size: 1.1rem;
-  padding: 0.7rem 2.7rem;
+  font-size: 1rem;
+  padding: 0.9rem 3rem;
   font-weight: 600;
   text-align: center;
-  color: white;
+  color: var(--secondary-text);
   outline: none;
   border-radius: 6px;
   border: none;
-  font-family: "Poppins", sans-serif;
-  background-color: #596d48;
+  box-shadow: 2px 2px 10px var(--neutral-dark);
+  font-family: sans-serif;
+  background-color: var(--primary);
   max-width: 270px;
 }
 button[disabled] {
@@ -134,12 +156,12 @@ button[disabled] {
   font-family: "Poppins", sans-serif;
 }
 .log-in {
-  color: #596d48;
+  color: var(--primary);
   font-weight: 600;
 }
 .errorText {
   font-size: 0.7rem;
-  color: red;
+  color: var(--invalid);
   font-family: "Poppins", sans-serif;
   opacity: 0;
 }
@@ -147,12 +169,12 @@ button[disabled] {
 .invalid,
 .invalid:focus {
   outline: none !important;
-  border: 2px solid rgb(255, 58, 8);
+  border: 2px solid var(--invalid);
 }
 .valid,
 .valid:focus {
   outline: none !important;
-  border: 2px solid rgb(124, 207, 0);
+  border: 2px solid var(--valid);
 }
 @media only screen and (min-width: 768px) {
   .container {
@@ -162,7 +184,9 @@ button[disabled] {
     justify-content: center;
   }
   .image-section {
+    justify-content: center;
     min-width: 40vw;
+    flex-flow: column nowrap;
   }
   .image-container {
     width: 80px;
@@ -172,13 +196,30 @@ button[disabled] {
     flex-flow: row wrap;
   }
   .logo-container {
-    margin-bottom: 15rem;
+    top: 25%;
+    position: absolute;
   }
   .logo-heading {
     font-size: 5rem;
   }
   .bottom-section {
     align-items: flex-start;
+  }
+  .credits {
+    display: block;
+    margin-top: auto;
+  }
+  .informational-text {
+    font-size: 1.3rem;
+  }
+  .input-field {
+    margin: 0.3rem 2rem;
+  }
+  h2.form-header {
+    margin-left: 2rem;
+  }
+  .form-container {
+    padding: 0.8rem 0rem;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -187,6 +228,6 @@ button[disabled] {
     height: 120px;
   }
   .input-field {
-    width: 45%;
+    width: 34%;
   }
 }
