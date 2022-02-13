@@ -33,7 +33,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   padding: 0.5rem;
   height: min-content;
@@ -118,6 +118,9 @@ span {
   background-color: #596d48;
   max-width: 270px;
 }
+button[disabled] {
+  opacity: 0.7;
+}
 .bottom-section {
   display: flex;
   flex-flow: column nowrap;
@@ -159,7 +162,6 @@ span {
     justify-content: center;
   }
   .image-section {
-    padding: 20rem 0rem;
     min-width: 40vw;
   }
   .image-container {
@@ -170,7 +172,7 @@ span {
     flex-flow: row wrap;
   }
   .logo-container {
-    align-self: flex-start;
+    margin-bottom: 15rem;
   }
   .logo-heading {
     font-size: 5rem;

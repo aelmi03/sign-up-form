@@ -33,7 +33,7 @@
           </h2>
           <h2 class="informational-text">You <i>know</i> you want to.</h2>
         </div>
-        <form class="form-container">
+        <form class="form-container" id = "form" novalidate action = "">
           <h2 class="informational-text">Let's do this!</h2>
           <div class="form-content">
             <div class="input-field">
@@ -58,18 +58,18 @@
             </div>
             <div class="input-field">
               <label class = "input-label">PASSWORD</label class = "input-label">
-              <input type="password" required />
+              <input class = "password" type="password" required />
               <p class = "errorText">Password can't be empty</p>
             </div>
             <div class="input-field">
               <label class = "input-label">CONFIRM PASSWORD</label class = "input-label">
-              <input type="password" required />
-              <p class = "errorText">First name can't be empty</p>
+              <input class = "confirmed" type="password" required />
+              <p class = "errorText">Password does not match</p>
             </div>
           </div>
         </form>
         <div class = "bottom-section">
-          <button class = "create-button">Create Account</button>
+          <button class = "create-button" type = "submit" form="form" disabled>Create Account</button>
            <p class = "create-account-text">Already have an account? <span class = "log-in">Log in</span></p>
         </div>
       </section>
