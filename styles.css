@@ -139,6 +139,11 @@ span {
   font-family: sans-serif;
   background-color: var(--primary);
   max-width: 270px;
+  transition: all 0.4s ease-in-out;
+}
+.create-button:hover {
+  color: var(--primary);
+  background-color: var(--primary-border);
 }
 button[disabled] {
   opacity: 0.7;
@@ -229,5 +234,16 @@ button[disabled] {
   }
   .input-field {
     width: 34%;
+  }
+  .advertisement {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .image-section {
+    min-width: 30vh;
+  }
+  .width {
+    width: 70%;
   }
 }
